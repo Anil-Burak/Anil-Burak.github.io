@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anıl Burak Dolaşık - Portfolio</title>
+    <meta name="description" content="Portfolio of Anıl Burak Dolaşık, Software Engineering Student & Developer">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="blob-bg">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">A.B.D.</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container hero-content">
+                <p class="greeting">Hi, my name is</p>
+                <h1 class="name">Anıl Burak Dolaşık</h1>
+                <h2 class="title">Software Engineering Student & Developer</h2>
+                <p class="hero-desc">Over 4 years of coding experience in software development, delivering real-world
+                    scalable applications.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-btn">View My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text glass-card">
+                        <p>I am a Software engineering student with over 4 years of coding experience. I have
+                            participated in national competitions such as the MEB Robotics Contest and Bilişim Garajı
+                            Hackathon, achieving 2nd place in the latter.</p>
+                        <p>Currently, I am responsible for managing all software operations at an educational
+                            institution, gaining comprehensive real-world experience while continuously improving my
+                            skills.</p>
+                    </div>
+                    <div class="education glass-card">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <h4>B.Sc. in Computer Engineering</h4>
+                            <p class="edu-school">Ankara University | 2023 - 2027</p>
+                            <span class="gpa">GPA: 3.17</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Software Operations Manager & Developer</h3>
+                            <h4>Çözüm Disleksi</h4>
+                            <span class="date">2024 - Present | Ankara</span>
+                            <ul>
+                                <li>Developed the institution's first official Android application, addressing a
+                                    long-standing need of educators.</li>
+                                <li>Automated manual workflows (attendance tracking, data entry, invoice tracking,
+                                    etc.), reducing time spent on routine tasks by over 40%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-grid">
+
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <h3>Çözüm Disleksi Mobile App</h3>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.cozumdisleksi.cozumapp&pcampaignid=web_share"
+                                    target="_blank" rel="noopener noreferrer">Play Store</a>
+                                <a href="https://apps.apple.com/tr/app/%C3%A7%C3%B6z%C3%BCm-disleksi/id6755349502?l=tr"
+                                    target="_blank" rel="noopener noreferrer">App Store</a>
+                            </div>
+                        </div>
+                        <p class="project-desc">Designed and developed the mobile version of the education platform with
+                            dedicated modules for educators, students, and families. Enhanced accessibility by making
+                            student progress tracking available on mobile.</p>
+                        <ul class="project-features">
+                            <li>Homework sharing</li>
+                            <li>Content access</li>
+                            <li>Real-time reporting</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Kotlin</span>
+                            <span>Android SDK</span>
+                            <span>Firebase</span>
+                            <span>ExoPlayer</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <h3>Çözüm Disleksi Website</h3>
+                            <div class="project-links">
+                                <a href="https://yeni.cozumdisleksi.com/" target="_blank" rel="noopener noreferrer">Live
+                                    Site</a>
+                            </div>
+                        </div>
+                        <p class="project-desc">Redesigned the company website and integrated it with the platform and
+                            mobile app. Centralized data flow for content, payments, user registration, and
+                            authentication.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <h3>Data Automation Tools</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/Anil-Burak" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                        <p class="project-desc">Built small-scale web scraping tools using Python to automate data
+                            collection, drastically reducing manual data extraction efforts.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>BeautifulSoup</span>
+                            <span>Selenium</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+
+                    <div class="skill-category glass-card">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Vercel</span>
+                            <span class="skill-tag">Android SDK</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card">
+                        <h3>Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Turkish (Native)</span>
+                            <span class="skill-tag">English (Fluent)</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Footer Section -->
+        <section id="contact" class="section contact">
+            <div class="container center-text">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-text">Currently exploring new opportunities and open to exciting projects. Feel free
+                    to reach out via email or connect with me on LinkedIn.</p>
+                <a href="mailto:anilburakd05@gmail.com" class="btn primary-btn email-btn">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer glass-card">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> Anıl Burak Dolaşık.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Anil-Burak" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/anil-burak-dlsk" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:anilburakd05@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

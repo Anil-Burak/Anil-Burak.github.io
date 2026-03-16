@@ -7,9 +7,26 @@
     --accent-3: #c084fc;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --nav-bg-scrolled: rgba(12, 14, 20, 0.8);
+    --nav-mobile-bg: rgba(12, 14, 20, 0.95);
+    --skill-tag-bg: rgba(255, 255, 255, 0.05);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease;
+}
+
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-1: #0284c7;
+    --accent-2: #4f46e5;
+    --accent-3: #9333ea;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(0, 0, 0, 0.05);
+    --nav-bg-scrolled: rgba(248, 250, 252, 0.85);
+    --nav-mobile-bg: rgba(248, 250, 252, 0.98);
+    --skill-tag-bg: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -102,6 +119,7 @@ body {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -180,7 +198,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(12, 14, 20, 0.8);
+    background: var(--nav-bg-scrolled);
     backdrop-filter: blur(15px);
     padding: 1rem 0;
     border-bottom: 1px solid var(--glass-border);
@@ -249,6 +267,37 @@ body {
     margin: 5px auto;
     background-color: var(--text-primary);
     transition: var(--transition);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+.theme-toggle:hover {
+    background: var(--skill-tag-bg);
+}
+
+.moon-icon {
+    display: none;
+}
+.sun-icon {
+    display: block;
+}
+
+[data-theme="light"] .moon-icon {
+    display: block;
+}
+[data-theme="light"] .sun-icon {
+    display: none;
 }
 
 /* Hero Section */
@@ -461,6 +510,16 @@ body {
     font-family: var(--font-heading);
     font-size: 0.8rem;
     color: var(--accent-1);
+    background: var(--skill-tag-bg);
+    border: 1px solid var(--glass-border);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1.5rem;
+    transition: var(--transition);
+}
+
+.tech-stack span:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.1);
 }
 
 /* Skills Section */
@@ -484,21 +543,50 @@ body {
 }
 
 .skill-tag {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--skill-tag-bg);
     border: 1px solid var(--glass-border);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.9rem;
     color: var(--text-secondary);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hover-color, var(--accent-1));
+    z-index: -1;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scaleX(0);
+    transform-origin: right;
 }
 
 .skill-tag:hover {
-    background: rgba(129, 140, 248, 0.1);
-    border-color: var(--accent-2);
-    color: var(--accent-2);
-    transform: translateY(-2px);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px -10px var(--hover-color, var(--accent-1));
 }
+
+.skill-tag:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Specific colors for different skill tags */
+.skill-tag:nth-child(1) { --hover-color: #f59e0b; } /* Kotlin/Firebase - Orange/Yellow */
+.skill-tag:nth-child(2) { --hover-color: #3b82f6; } /* Python/Git - Blue */
+.skill-tag:nth-child(3) { --hover-color: #eab308; } /* JS/Vercel - Yellow */
+.skill-tag:nth-child(4) { --hover-color: #ef4444; } /* HTML/Android - Red */
+.skill-tag:nth-child(5) { --hover-color: #06b6d4; } /* CSS - Cyan */
 
 /* Contact / Footer */
 .center-text {
@@ -588,7 +676,7 @@ body {
         top: 0;
         gap: 0;
         flex-direction: column;
-        background-color: rgba(12, 14, 20, 0.95);
+        background-color: var(--nav-mobile-bg);
         backdrop-filter: blur(20px);
         width: 100%;
         height: 100vh;
